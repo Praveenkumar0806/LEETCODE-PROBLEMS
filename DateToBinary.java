@@ -13,16 +13,14 @@ public class DateToBinary {
                 String bin = "";
                 while (num != 0) {
                     int digit = num % 2;
-                    bin = digit + bin;  // build binary for current number
+                    bin = digit + bin; 
                     num = num / 2;
                 }
-                if (!res.isEmpty()) res += "-";  // append '-' after previous segment
-                res += bin;  // append binary of this segment
+                if (!res.isEmpty()) res += "-";  
+                res += bin;  
                 s1 = "";
             }
         }
-
-        // process last number
         if (!s1.isEmpty()) {
             int num = Integer.parseInt(s1);
             String bin = "";
@@ -31,10 +29,9 @@ public class DateToBinary {
                 bin = digit + bin;
                 num = num / 2;
             }
-            if (!res.isEmpty()) res += "-";  // append '-' before last segment
+            if (!res.isEmpty()) res += "-";  
             res += bin;
         }
-
         System.out.println( res);
     }
 }
